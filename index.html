@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lastfm player</title>
+  <script type="module" src="components/app-shell.js"></script>
+</head>
+<body>
+  <app-shell></app-shell>
+  <script>
+    const root = document.querySelector('body');
+    root.addEventListener('top-tracks-loaded', (e) => {
+      console.log(e);
+    })
+  
+  
+  </script>
+</body>
+</html>
