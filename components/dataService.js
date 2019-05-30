@@ -12,16 +12,20 @@ class DataService extends LitElement {
 
   async connectedCallback() {
     super.connectedCallback();
-    this.getTopTracks();
+    this.getTopTracks(this.config.artists[0]);
   }
 
-  async getTopTracks() {
-    let { toptracks } = await Api.byArtist(this.config.artists[0], 'getTopTracks');
+  async getTopTracks(artist) {
+    let { toptracks } = await Api.byArtist(artist, 'getTopTracks');
     let topTracksLoaded = new CustomEvent('top-tracks-loaded', {
       bubbles: true,
       composed: true,
       detail: {
-        data: toptracks
+        more: { 
+          title: artist,
+          subtitle: 'Top Tracks'
+        },
+        track: toptracks.track || []
       }
     });
     this.dispatchEvent(topTracksLoaded); 

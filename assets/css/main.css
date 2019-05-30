@@ -1,0 +1,32 @@
+:root {
+  /* Variables */
+  --img-size-small: 280px;
+  --heading-font-family: 'Quicksand Bold', sans-serif;
+  --heading-font-weight: bold;
+  --h1-font-size: 3.6rem;
+  --h2-font-size: 3.2rem;
+  --h3-font-size: 2.8rem;
+  --h4-font-size: 2.4rem;
+  --h5-font-size: 2rem;
+  --h6-font-size: 1.8rem;
+  
+  /* Typography */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 2em 0;
+}
+
+@font-face {
+  font-family: 'Quicksand Regular';
+  src: url('../font/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url('../font/Quicksand/Quicksand-Bold.ttf') format('truetype');
+}
